@@ -133,6 +133,64 @@
 
 ### number place value and face value
 ```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "enter the number : ";
+    cin >> n;
+
+    cout << "find place value of : ";
+    int pn;
+    cin >> pn;
+
+    int place = 1;
+    int temp = n;   
+
+    while (temp != 0) {
+
+        int p = temp % 10;
+
+        if (p == pn) {
+
+            if (place == 1) {
+                cout << "place value of " << pn << " in " << n << " is : ones.";
+            }
+
+            if (place == 10) {
+                cout << "place value of " << pn << " in " << n << " is : tens.";
+            }
+
+            if (place == 100) {
+                cout << "place value of " << pn << " in " << n << " is : hundreds.";
+            }
+
+            if (place == 1000) {
+                cout << "place value of " << pn << " in " << n << " is : thousands.";
+            }
+
+            if (place == 1) {
+                cout << "place value of " << pn << " in " << n << " is : ten thousands.";
+            }
+
+            if (place == 1) {
+                cout << "place value of " << pn << " in " << n << " is : hundread thousands.";
+            }
+
+            if (place == 1) {
+                cout << "place value of " << pn << " in " << n << " is : milions.";
+            }
+
+            break;
+        }
+
+        temp = temp / 10;
+        place = place * 10;
+    }
+
+    return 0;
+}
 
 ```
 
