@@ -137,7 +137,7 @@
 using namespace std;
 
 int main() {
-    int n;
+    long long int n;
     cout << "enter the number : ";
     cin >> n;
 
@@ -145,43 +145,15 @@ int main() {
     int pn;
     cin >> pn;
 
-    int place = 1;
-    int temp = n;   
+    long long int place = 1;
+    long long int temp = n;   
 
     while (temp != 0) {
 
         int p = temp % 10;
 
         if (p == pn) {
-
-            if (place == 1) {
-                cout << "place value of " << pn << " in " << n << " is : ones.";
-            }
-
-            if (place == 10) {
-                cout << "place value of " << pn << " in " << n << " is : tens.";
-            }
-
-            if (place == 100) {
-                cout << "place value of " << pn << " in " << n << " is : hundreds.";
-            }
-
-            if (place == 1000) {
-                cout << "place value of " << pn << " in " << n << " is : thousands.";
-            }
-
-            if (place == 1) {
-                cout << "place value of " << pn << " in " << n << " is : ten thousands.";
-            }
-
-            if (place == 1) {
-                cout << "place value of " << pn << " in " << n << " is : hundread thousands.";
-            }
-
-            if (place == 1) {
-                cout << "place value of " << pn << " in " << n << " is : milions.";
-            }
-
+            cout << "place value of " << pn << " in " << n << " is :" << place << " place";
             break;
         }
 
