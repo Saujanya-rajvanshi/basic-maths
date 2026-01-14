@@ -3,56 +3,18 @@
 ### INDEX
 - [checklist](#checklist)
 - [number place value and face value](#number-place-value-and-face-value)
-
-######  Checklist
-
-# 📝 Aptitude Learning Checklist
-
-## 🧮 Level 0: Number Foundations
-- [x] **Number System – Basics**
-  - [x] Counting numbers
-  - [x] Reading & writing numbers
-  - [x] Place value (ones, tens, hundreds, thousands)
-  - [x] Face value vs place value
-  - [x] Number names
-- [x] **Types of Numbers**
-  - [x] Natural numbers
-  - [x] Whole numbers
-  - [x] Even & odd numbers
-  - [x] Zero concept
-- [x] **Comparison of Numbers**
-  - [x] Greater than, less than, equal to
-  - [x] Number line
-  - [x] Ascending & descending order
-
-## ➕ Level 1: Basic Operations
-- [x] **Addition**
-  - [x] Single digit
-  - [x] Multi-digit
-  - [x] Word problems
-- [x] **Subtraction**
-  - [x] Borrow method
-  - [x] Difference between numbers
-  - [x] Word problems
-- [x] **Multiplication**
-  - [x] Tables (1–20)
-  - [x] Single × multi digit
-  - [x] Properties of multiplication
-- [ ] **Division**
-  - [x] Simple division
-  - [x] Remainder & quotient
-  - [x] Division checks
-
-## 🔢 Level 2: Core Number Skills
-- [x] **Factors & Multiples**
-  - [x] Factors
-  - [x] Multiples
-  - [x] Prime numbers
-  - [x] Composite numbers
-- [x] **HCF & LCM**
-  - [x] Prime factorization
-  - [x] Division method
-  - [x] Real-life problems
+- [Types of Numbers]()
+- [Even and odd numbers]()
+- [Greater than, less than, equal to]
+- [Ascending & descending order]()
+- [calculator]()
+- [Factors]()
+- [Multiples]()
+- [Prime numbers]()
+- [Composite numbers]()
+- [HCF & LCM]()
+- [Prime factorization]()
+- [Division method]()
 - [ ] **Fractions**
   - [ ] Proper & improper fractions
   - [ ] Mixed fractions
