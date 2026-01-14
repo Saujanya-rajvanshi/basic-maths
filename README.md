@@ -7,13 +7,14 @@
 - [Even and odd numbers]()
 - [Greater than less than equal to]()
 - [Ascending & descending order]()
-- [calculator]()
-- [Factors]()
-- [Multiples]()
-- [Prime numbers]()
-- [Composite numbers]()
-- [HCF & LCM]()
-- [Prime factorization]()
+- [calculator](#calculator)
+- [Factors](#factors-of-a-number)
+- [multiples](#multiples)
+- [prime numbers](#prime-number)
+- [composite numbers](#composite-numbers)
+- [HCF](#HCF)
+- [LCM]()
+- [prime factorisation](#prime-factorisation)
 - [Division method]()
 - [ ] **Fractions**
   - [ ] Proper & improper fractions
@@ -23,6 +24,11 @@
   - [ ] Decimal place value
   - [ ] Operations on decimals
   - [ ] Conversion: fraction ↔ decimal
+     
+
+- [loss or profit by cp and sp](#loss-or-profit-by-cp-and-sp)
+- [validation of triangle](#validation-of-triangle)
+- [Arithmetic progression](#Arithmetic-progression)
 
 ## 📊 Level 3: Commercial Math
 - [ ] **Percentages**
@@ -128,9 +134,6 @@ int main() {
 
 ```
 
-
-
-
 #### factors of a number
 ```cpp
 #include <bits/stdc++.h>
@@ -157,17 +160,6 @@ int main()
     return 0;
 }
 ```
-
-- [calculator](#calculator)
-- [number factors](#number-factor)
-- [multiples](#multiples)
-- [prime numbers](#prime-number)
-- [composite numbers](#composite-numbers)
-- [prime factorisation](#prime-factorisation)
-- [loss or profit by cp and sp](#loss-or-profit-by-cp-and-sp)
-- [validation of triangle](#validation-of-triangle)
-- [Arithmetic progression](#Arithmetic-progression)
-- [HCF](#HCF)
 
 ##### boiler plate code
 ```cpp
