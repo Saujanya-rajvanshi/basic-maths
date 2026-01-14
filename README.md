@@ -133,8 +133,64 @@ int main() {
 }
 
 ```
+### types of numbers
 
-#### factors of a number
+### even odd 
+
+### Greater than less than equal to
+
+### Ascending descending
+
+### calculator
+```cpp
+#include<iostream>
+using namespace std;
+
+void calculator(){
+    cout << "hello its your calculator";
+    cout << endl ;
+    cout<< "select any operator" << endl << "+ - * / ";
+    char opr ;
+    cin >> opr ;
+    int a, b;
+    cout << "enter the first numbers";
+    cin >> a;
+    cout << "enter the second number";
+    cin >> b;
+    int answer;
+    if ( opr == '+'){
+        answer = a+b;
+    }
+    else if( opr == '-'){
+        answer = a-b;
+    }
+    else if ( opr == '*'){
+        answer = a*b;
+    }
+    else if ( opr == '/'){
+        int rem ;
+        rem = a % b ;
+        cout << " remainer : " << rem ;
+        answer = a/b ;
+        cout << endl ;
+        cout << " quotient : " ;
+        
+    }
+    cout << "your answer  : " << answer;
+    cout << endl << endl ;
+}
+
+int main(){
+    int t;
+    cin >> t;
+    for(int i=0; i<t; i++){
+        calculator();
+    }
+    return 0;
+}
+```
+
+### factors of a number
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -160,30 +216,34 @@ int main()
     return 0;
 }
 ```
-
-##### boiler plate code
+### multiples 
 ```cpp
 #include<iostream>
 using namespace std;
 
+int multiples(int n, int k){
+    cout << "your multiples are :\n"; 
+    for (int i=1;i<=k;i++){
+        cout << i*n << " ";
+    }
+    return 0;
+}
+
 int main(){
-    cout<< " hello world";
-return 0;
+    cout << "enter the number";
+    int n;
+    cin >> n;
+    cout << "how may nultiples do you want";
+    int k;
+    cin >> k;
+
+    multiples(n,k);
+
+    return 0;
 }
 ```
 
-##### next line
-```cpp
-// new line
-cout << endl ;
-cout << "\n";
-cout << "hello\nworld";
-```
-##### output and input 
-```cpp
-//output cout << ;
-//input cin >> ;
-```
+
 ### prime number
 ```cpp
 #include<iostream>
@@ -240,73 +300,31 @@ return 0;
 }
 ```
 
-### calculator
+### LCM
+
+### HCF
 ```cpp
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-void calculator(){
-    cout << "hello its your calculator";
-    cout << endl ;
-    cout<< "select any operator" << endl << "+ - * / ";
-    char opr ;
-    cin >> opr ;
-    int a, b;
-    cout << "enter the first numbers";
-    cin >> a;
-    cout << "enter the second number";
-    cin >> b;
-    int answer;
-    if ( opr == '+'){
-        answer = a+b;
-    }
-    else if( opr == '-'){
-        answer = a-b;
-    }
-    else if ( opr == '*'){
-        answer = a*b;
-    }
-    else if ( opr == '/'){
-        int rem ;
-        rem = a % b ;
-        cout << " remainer : " << rem ;
-        answer = a/b ;
-        cout << endl ;
-        cout << " quotient : " ;
-        
-    }
-    cout << "your answer  : " << answer;
-    cout << endl << endl ;
-}
-
-int main(){
-    int t;
-    cin >> t;
-    for(int i=0; i<t; i++){
-        calculator();
-    }
-    return 0;
-}
-```
-
-### namber factor
-```cpp
-#include<iostream>
-using namespace std;
-
-int main(){
-    cout << "hello";
-    int n;
+int main() {
+    int n,i;
+    cout << "Enter number (n): ";
     cin >> n;
-    for(int i=1;i<=n;i++){
-        if(n % i==0){
-            cout << i;
+    int hcf;
+    for(i=(n/2);i<n;i++){
+        if(n%i==0){
+            hcf=i;
         }
     }
+
+    cout << "hcf: " << hcf;
+    
+
     return 0;
 }
-//never start the loop with zero as it breaks the loop as division by zero is undefined
 ```
+
 ### prime factorisation
 ```cpp
 #include <iostream>
@@ -334,32 +352,6 @@ int main() {
 
 ```
 
-### multiples 
-```cpp
-#include<iostream>
-using namespace std;
-
-int multiples(int n, int k){
-    cout << "your multiples are :\n"; 
-    for (int i=1;i<=k;i++){
-        cout << i*n << " ";
-    }
-    return 0;
-}
-
-int main(){
-    cout << "enter the number";
-    int n;
-    cin >> n;
-    cout << "how may nultiples do you want";
-    int k;
-    cin >> k;
-
-    multiples(n,k);
-
-    return 0;
-}
-```
 
 
 ### loss or profit by cp and sp 
@@ -439,43 +431,7 @@ int main() {
 ```
 
 
-### HCF
-```cpp
-#include <iostream>
-using namespace std;
 
-int main() {
-    int n,i;
-    cout << "Enter number (n): ";
-    cin >> n;
-    int hcf;
-    for(i=(n/2);i<n;i++){
-        if(n%i==0){
-            hcf=i;
-        }
-    }
 
-    cout << "hcf: " << hcf;
-    
 
-    return 0;
-}
-```
-
-```cpp
-int maxx(int num1, int num2) {
-if (num1 >= num2) return num1;
-else return num2;
-}
-int main() {
-int num1, num2;
-cin >> num1 >> num2;
-int minimum = maxx(num1, num2);
-cout << minimu
-return 0;
-}
-```
-
-```cpp
-```
 
