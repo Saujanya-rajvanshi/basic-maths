@@ -5,7 +5,7 @@
 - [number place value and face value](#number-place-value-and-face-value)
 - [Types of Numbers]()
 - [Even and odd numbers]()
-- [Greater than, less than, equal to]
+- [Greater than less than equal to]()
 - [Ascending & descending order]()
 - [calculator]()
 - [Factors]()
