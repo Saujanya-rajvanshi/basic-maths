@@ -1,19 +1,19 @@
 # basic-maths
 
-### INDEX
+## INDEX
 - [checklist](#checklist)
 - [number place value and face value](#number-place-value-and-face-value)
-- [Types of Numbers]()
-- [Even and odd numbers]()
-- [Greater than less than equal to]()
-- [Ascending & descending order]()
+- [Types of Numbers](#types-of-numbers)
+- [Even and odd numbers](#even-odd)
+- [Greater than less than equal to](#Greater-than-less-than-equal-to)
+- [Ascending & descending order](#Ascending-descending)
 - [calculator](#calculator)
 - [Factors](#factors-of-a-number)
 - [multiples](#multiples)
 - [prime numbers](#prime-number)
 - [composite numbers](#composite-numbers)
 - [HCF](#HCF)
-- [LCM]()
+- [LCM](#LCM)
 - [prime factorisation](#prime-factorisation)
 - [Division method]()
 - [ ] **Fractions**
@@ -24,12 +24,9 @@
   - [ ] Decimal place value
   - [ ] Operations on decimals
   - [ ] Conversion: fraction ↔ decimal
-     
-
 - [loss or profit by cp and sp](#loss-or-profit-by-cp-and-sp)
 - [validation of triangle](#validation-of-triangle)
 - [Arithmetic progression](#Arithmetic-progression)
-
 ## 📊 Level 3: Commercial Math
 - [ ] **Percentages**
   - [ ] Basics
