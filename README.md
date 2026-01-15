@@ -131,10 +131,87 @@ int main() {
 
 ```
 ### types of numbers
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int types_of_number(int n){
+    if(n == int(n)){
+        cout << n << " is an integer number " ;
+    }
+    else if(n == int(n) && n >= 0 ){
+        cout << n << " is an whole number " ;
+    }
+    else if(n == int(n) && n > 0){
+        cout << n << " is an natural number " ;
+    }
+      
+    return 0;
+}
+
+int main(){
+    int n;
+    cout << "enter first number : ";
+    cin >> n ;
+
+    types_of_number(n);
+}
+```
 
 ### even odd 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int even_odd(int n){
+    if(n%2 == 0){
+        cout << n << " is even number " ;
+    }
+    else{
+        cout << n << " is odd number " ;
+    }
+    
+    return 0;
+}
+
+int main(){
+    int n;
+    cout << "enter first number : ";
+    cin >> n ;
+
+    even_odd(n);
+}
+```
 
 ### Greater than less than equal to
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int greater_less_equal(int m,int n){
+    if(m > n){
+        cout << m << " is greater than " << n ;
+    }
+    if(m < n){
+        cout << n << " is greater than " << m ;
+    }
+    if(m == n){
+        cout << m << " is equal to " << n ;
+    }
+    return 0;
+}
+
+int main(){
+    int n;
+    cout << "enter first number : ";
+    cin >> n;
+    int m;
+    cout << "enter second number : ";
+    cin >> m;
+    
+    greater_less_equal(m , n);
+}
+```
 
 ### Ascending descending
 
