@@ -214,6 +214,64 @@ int main(){
 ```
 
 ### Ascending descending
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int> descending(vector<int>& arr ,int n){  
+    cout << "the array descending order ";
+    for(int i=0; i<n-1; i++){
+        for(int k=0; k<n-1-i; k++){
+            int temp = arr[i];
+            if(arr[k] < arr[k+1]){
+                temp = arr[k];
+                arr[k] = arr[k+1];
+                arr[k+1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+vector<int> ascending(vector<int>& arr ,int n){  
+    cout << "the array ascending order ";
+    for(int i=0; i<n-1; i++){
+        for(int k=0; k<n-1-i; k++){
+            int temp = arr[i];
+            if(arr[k] > arr[k+1]){
+                temp = arr[k];
+                arr[k] = arr[k+1];
+                arr[k+1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+void display(vector<int>& arr,int n) {
+    for (int i = 0;i< n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int main(){
+    int n;
+    cout << "size of array : ";
+    cin >> n ;
+
+    vector<int> arr(n);
+    for(int i=0 ; i<n ; i++){
+        cin >> arr[i];
+    }
+
+    ascending(arr, n);
+    display(arr,n);
+    cout << endl ;
+    descending(arr , n);
+    display(arr,n);
+}
+```
 
 ### calculator
 ```cpp
@@ -290,6 +348,7 @@ int main()
     return 0;
 }
 ```
+
 ### multiples 
 ```cpp
 #include<iostream>
