@@ -12,8 +12,8 @@
 - [multiples](#multiples)
 - [prime numbers](#prime-number)
 - [composite numbers](#composite-numbers)
-- [HCF](#HCF)
 - [LCM](#LCM)
+- [HCF](#HCF)
 - [prime factorisation](#prime-factorisation)
 - [Division method]()
 - [ ] **Fractions**
