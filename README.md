@@ -489,6 +489,7 @@ int main() {
 }
 ```
 #### lcm brute force 
+* prime-factor–style logic
 ```cpp
 
 ```
