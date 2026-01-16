@@ -434,28 +434,115 @@ return 0;
 ```
 
 ### LCM
-
-### HCF
+#### lcm with hcf 
 ```cpp
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int n,i;
-    cout << "Enter number (n): ";
-    cin >> n;
-    int hcf;
-    for(i=(n/2);i<n;i++){
-        if(n%i==0){
-            hcf=i;
+int hcf(vector<int> &arr,int n){
+    set<int> temp;
+    int mn = *min_element(arr.begin(), arr.end());
+
+    for(int i=1;i<=mn;i++){ //checking upto smallest number as hcf cant be greater than smallest number
+        bool iscommon = true ;
+
+        for(int j= 0;j<n;j++){
+            if(arr[j]%i != 0){
+                iscommon = false;
+                break;
+            }
+        }
+
+        if(iscommon){
+            temp.insert(i);
         }
     }
+    int multiply = 1;
+    for (int x : arr) {
+        multiply *= x;   // update the SAME variable
+    }
 
-    cout << "hcf: " << hcf;
+    int hcfm = *temp.rbegin();
     
+    //LCM(a,b)=   ∣a×b∣ / GCD(a,b);
+    int lcm = multiply / hcfm ;
 
+return lcm ;
+}
+
+int main() {
+    int n;
+    cout << "how many numbers : ";
+    cin >> n;
+    
+    vector<int> arr(n);
+    for(int i=0;i<n;i++){
+        cin >> arr[i];
+    }
+
+
+    cout << "hcf: ";
+    int answer = hcf(arr,n);
+    cout << answer ;
+    
     return 0;
 }
+```
+#### lcm brute force 
+```cpp
+
+```
+
+### HCF
+#### hcf brute force 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int hcf(vector<int> &arr,int n){
+    set<int> temp;
+    int mn = *min_element(arr.begin(), arr.end());      //checking upto smallest number as hcf cant be greater than smallest number
+
+    for(int i=1;i<=mn;i++){
+        bool iscommon = true ;
+
+        for(int j= 0;j<n;j++){ //check i devides all elements
+            if(arr[j]%i != 0){
+                iscommon = false;    //break if any one element found which is not devisible 
+                break;
+            }
+        }
+
+        if(iscommon){
+            temp.insert(i); // if devides every element insert in temp set 
+        }
+    }
+    
+    int hcfm = *temp.rbegin();
+
+return hcfm ;
+}
+
+int main() {
+    int n;
+    cout << "how many numbers : ";
+    cin >> n;
+    
+    vector<int> arr(n);
+    for(int i=0;i<n;i++){
+        cin >> arr[i];
+    }
+
+
+    cout << "hcf: ";
+    int answer = hcf(arr,n);
+    cout << answer ;
+    
+    return 0;
+}
+
+
+
 ```
 
 ### prime factorisation
