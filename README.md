@@ -16,10 +16,8 @@
 - [HCF](#HCF)
 - [prime factorisation](#prime-factorisation)
 - [Division method]()
-- [ ] **Fractions**
-  - [ ] Proper & improper fractions
-  - [ ] Mixed fractions
-  - [ ] Addition & subtraction of fractions
+- [fraction types](#fraction-types)
+- [Addition & subtraction of fractions](#add-sub-fractions)
 - [ ] **Decimals**
   - [ ] Decimal place value
   - [ ] Operations on decimals
@@ -573,17 +571,21 @@ int main() {
 
 ```
 
-#### proper and improper fraction
+#### fraction types
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int properandimproper(int numerator,int denominator){
-    if(numerator >= denominator){
+    if(numerator < denominator){
         cout << "proper fraction";
     }
-    else{
+    if(numerator >= denominator){
         cout << "improper fraction";
+    }
+    int remainder = numerator%denominator ;
+    if(remainder != 0){
+        cout << "mixed fraction";
     }
    return 1;
 }
@@ -602,6 +604,10 @@ int main() {
 
     return 0;
 }
+```
+### add sub fractions
+```cpp
+
 ```
 
 ### loss or profit by cp and sp 
