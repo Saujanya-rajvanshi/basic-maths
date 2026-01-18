@@ -573,7 +573,36 @@ int main() {
 
 ```
 
+#### proper and improper fraction
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
 
+int properandimproper(int numerator,int denominator){
+    if(numerator >= denominator){
+        cout << "proper fraction";
+    }
+    else{
+        cout << "improper fraction";
+    }
+   return 1;
+}
+
+int main() {
+    int p;
+    cout << "enter numerator : ";
+    cin >> p;
+    
+    int q;
+    cout << "enter denominator : ";
+    cin >> q;
+
+    cout << "the fraction is : ";
+    properandimproper(p,q);
+
+    return 0;
+}
+```
 
 ### loss or profit by cp and sp 
 ```cpp
