@@ -607,6 +607,55 @@ int main() {
 ```
 ### add sub fractions
 ```cpp
+#include <bits/stdc++.h>
+#include <numeric>
+using namespace std;
+
+int findLCM(vector<int>& den) {
+    int lc = den[0];
+    for (int i = 1; i < den.size(); i++) {
+        lc = lcm(lc, den[i]);
+    }
+    return lc;
+}
+
+int fractionadd(vector<int>& num, vector<int>& den, int l) {
+    int sum = 0;
+    for (int i = 0; i < num.size(); i++) {
+        sum += num[i] * (l / den[i]);
+    }
+    return sum;
+}
+
+int fractionsub(vector<int>& num, vector<int>& den, int l) {
+    int sub = num[0] * (l / den[0]);
+    for (int i = 1; i < num.size(); i++) {
+        sub -= num[i] * (l / den[i]);
+    }
+    return sub;
+}
+
+int main() {
+    int n;
+    cout << "How many fractions: ";
+    cin >> n;
+
+    vector<int> num(n), den(n);
+
+    for (int i = 0; i < n; i++) {
+        cout << "Enter numerator: ";
+        cin >> num[i];
+        cout << "Enter denominator: ";
+        cin >> den[i];
+    }
+
+    int l = findLCM(den);
+
+    cout << "Addition = " << fractionadd(num, den, l) << "/" << l << endl;
+    cout << "Subtraction = " << fractionsub(num, den, l) << "/" << l << endl;
+
+    return 0;
+}
 
 ```
 
