@@ -20,12 +20,12 @@
 - [Addition & subtraction of fractions](#add-sub-fractions)
 - [Decimal place value](#Decimal-place-value)
 - [Conversion fraction to decimal](#Conversion-fraction-to-decimal)
+- [Percentages](#Percentages)
+- []()
 - [loss or profit by cp and sp](#loss-or-profit-by-cp-and-sp)
 - [validation of triangle](#validation-of-triangle)
 - [Arithmetic progression](#Arithmetic-progression)
-## 📊 Level 3: Commercial Math
-- [ ] **Percentages**
-  - [ ] Basics
+Percentages
   - [ ] Increase & decrease
   - [ ] Percentage comparison
 - [ ] **Ratio & Proportion**
@@ -714,7 +714,27 @@ int main() {
     return 0;
 }
 ```
+### Percentages
+```cpp
+#include <iostream>
+using namespace std;
 
+int main() {
+    int part ;
+    cout << "enter the part : ";
+    cin >> part ;
+
+    int total ;
+    cout << "enter the total : ";
+    cin >> total ;
+
+    float percentage = ((float)part / total) * 100;
+
+    cout << part << " is " << percentage << "% of " << total ;
+
+    return 0;
+}
+```
 
 
 
