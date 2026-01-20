@@ -19,8 +19,7 @@
 - [fraction types](#fraction-types)
 - [Addition & subtraction of fractions](#add-sub-fractions)
 - [Decimal place value](#Decimal-place-value)
-  - [ ] Operations on decimals
-  - [ ] Conversion: fraction ↔ decimal
+- [Conversion fraction to decimal](#Conversion-fraction-to-decimal)
 - [loss or profit by cp and sp](#loss-or-profit-by-cp-and-sp)
 - [validation of triangle](#validation-of-triangle)
 - [Arithmetic progression](#Arithmetic-progression)
@@ -694,7 +693,27 @@ int main() {
     return 0;
 }
 ```
+### Conversion fraction to decimal
+```cpp
+#include <iostream>
+using namespace std;
 
+int main() {
+    int num ;
+    cout << "enter the numerator : ";
+    cin >> num ;
+
+    int den ;
+    cout << "enter the denominator : ";
+    cin >> den ;
+
+    double decimal = (double)num / den ;
+
+    cout << num << "/" << den << "=" << decimal ;
+
+    return 0;
+}
+```
 
 
 
