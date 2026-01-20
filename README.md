@@ -18,8 +18,7 @@
 - [Division method]()
 - [fraction types](#fraction-types)
 - [Addition & subtraction of fractions](#add-sub-fractions)
-- [ ] **Decimals**
-  - [ ] Decimal place value
+- [Decimal place value](#Decimal-place-value)
   - [ ] Operations on decimals
   - [ ] Conversion: fraction ↔ decimal
 - [loss or profit by cp and sp](#loss-or-profit-by-cp-and-sp)
@@ -658,6 +657,63 @@ int main() {
 }
 
 ```
+### Decimal place value
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    double n;
+    cout << "enter the number : ";
+    cin >> n;
+
+    int intPart = (int)n;
+    double fracPart = n - intPart;
+
+    cout << "find place value of : ";
+    int pn;
+    cin >> pn;
+
+    double temp = n;
+    int count = 1;
+    int digit = 0;
+    
+    for(int i = 0; i < 10; i++) {
+        fracPart *= 10;
+        digit = (int)fracPart;
+        fracPart -= digit;
+        count *= 10;
+        
+        if(digit == pn) {
+            break;   // or do something
+        }
+    }
+
+    cout << "you number " << pn << " has a place value : " << count << "th";
+
+    return 0;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### loss or profit by cp and sp 
 ```cpp
