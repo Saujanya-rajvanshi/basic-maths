@@ -2,9 +2,10 @@
 
 
 ### basic maths codes 
-- [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)  digit extraction
-- [9. palindrom number](https://leetcode.com/problems/palindrome-number/) reverse / compare
-- [66. Plus One](https://leetcode.com/problems/plus-one/) carry handling
+- [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)  digit extraction $
+- [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/description/) bitt manipulation $
+- [9. palindrom number](https://leetcode.com/problems/palindrome-number/) reverse / compare $
+- [66. Plus One](https://leetcode.com/problems/plus-one/) carry handling 
 - [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) basic math / binary search
 - [50. Pow(x, n)](https://leetcode.com/problems/powx-n/description/) fast exponentiation
 - [258. Add Digits](https://leetcode.com/problems/add-digits/) digit sum / math trick
@@ -26,7 +27,21 @@
 - [202. Happy Number](https://leetcode.com/problems/happy-number/)
 
 
+
+### learnings 
+* reverse
+* changing num to string and string to binary
+* changing binary to int and int to binary  
+
+
+
+
+
+
+
+
 ### short forms
+
 * reverse string
 ```cpp
         string s = to_string(x);
