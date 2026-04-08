@@ -33,10 +33,52 @@
         reverse(rev.begin(), rev.end());
 ```
 
+* reverse bits
+```cpp
+class Solution {
+public:
+    int reverseBits(int n) {
+        string s = bitset<32>(n).to_string(); //number to binary 
+
+        reverse(s.begin(), s.end()); //reverse
+
+        int rev = 0;  
+
+        for(char c : s) {    // binary to number 
+            rev = rev * 2 + (c - '0');
+        } 
+
+        
+    return rev;
+    }
+};
+```
+```cpp
+//better
+class Solution {
+public:
+    uint32_t reverseBits(uint32_t n) {
+        uint32_t rev = 0;
+
+        for(int i = 0; i < 32; i++) {
+            rev = (rev << 1) | (n & 1);
+            n >>= 1;
+        }
+
+        return rev;
+    }
+};
+```
+
+
+
+
+
 * insert digit 
 ```cpp
         digits.insert(digits.begin(), 1);
 ```
+
 
 * sqrt
 ```cpp
@@ -508,6 +550,240 @@ while(n > 0){
 }
 return count;
 ```
+
+
+
+Here are your **complete, clean notes (DSA-focused 🚀)** for all 4 conversions:
+
+---
+
+# 🔥 1. String → Integer
+
+## ✅ Built-in
+
+```cpp
+int num = stoi(s);
+```
+
+---
+
+## ✅ Manual (IMPORTANT 🔥)
+
+```cpp
+int num = 0;
+for(char c : s) {
+    num = num * 10 + (c - '0');
+}
+```
+
+### 🧠 Core Idea
+
+```
+num = num * base + digit
+(base = 10)
+```
+
+---
+
+## ⚠️ With Negative
+
+```cpp
+int i = 0, sign = 1;
+if(s[0] == '-') {
+    sign = -1;
+    i = 1;
+}
+
+int num = 0;
+for(; i < s.size(); i++) {
+    num = num * 10 + (s[i] - '0');
+}
+
+num *= sign;
+```
+
+---
+
+# 🔥 2. Integer → String
+
+## ✅ Built-in
+
+```cpp
+string s = to_string(num);
+```
+
+---
+
+## ✅ Manual (IMPORTANT 🔥)
+
+```cpp
+string s = "";
+
+while(num > 0) {
+    s.push_back((num % 10) + '0');
+    num /= 10;
+}
+
+reverse(s.begin(), s.end());
+```
+
+---
+
+## ⚠️ Handle 0 & Negative
+
+```cpp
+if(num == 0) return "0";
+
+bool neg = false;
+if(num < 0) {
+    neg = true;
+    num = -num;
+}
+
+string s = "";
+while(num > 0) {
+    s.push_back((num % 10) + '0');
+    num /= 10;
+}
+
+if(neg) s.push_back('-');
+reverse(s.begin(), s.end());
+```
+
+---
+
+# 🔥 3. Binary → Integer
+
+## ✅ Built-in
+
+```cpp
+int num = stoi(s, 0, 2);
+```
+
+---
+
+## ✅ Manual (MOST IMPORTANT 🔥)
+
+```cpp
+int num = 0;
+
+for(char c : s) {
+    num = num * 2 + (c - '0');
+}
+```
+
+### 🧠 Core Idea
+
+```
+num = num * base + digit
+(base = 2)
+```
+
+---
+
+# 🔥 4. Integer → Binary
+
+## ✅ Manual (MOST IMPORTANT 🔥)
+
+```cpp
+if(num == 0) return "0";
+
+string s = "";
+
+while(num > 0) {
+    s.push_back((num % 2) + '0');
+    num /= 2;
+}
+
+reverse(s.begin(), s.end());
+```
+
+---
+
+## ✅ Using bitset
+
+```cpp
+string s = bitset<32>(num).to_string();
+```
+
+---
+
+# 🧠 MASTER PATTERN (VERY IMPORTANT)
+
+## ⭐ Universal Formula
+
+```
+num = num * base + digit
+```
+
+| Conversion   | Base |
+| ------------ | ---- |
+| String → Int | 10   |
+| Binary → Int | 2    |
+
+---
+
+## ⭐ Reverse Conversion
+
+```
+digit = num % base
+num = num / base
+```
+
+| Conversion   | Base |
+| ------------ | ---- |
+| Int → String | 10   |
+| Int → Binary | 2    |
+
+---
+
+# 🚀 Interview Cheatsheet
+
+* Use **manual method** → for DSA problems
+* Use **built-in** → for normal coding
+* Always remember:
+
+  * `'0' → 48`, `'1' → 49`
+  * so → `c - '0'`
+
+---
+
+# 🔥 Most Asked Mistakes
+
+❌ Forgetting `reverse()`
+❌ Not handling `0`
+❌ Ignoring negative numbers
+❌ Using wrong base
+
+---
+
+If you want next level:
+👉 I can give **combined template (all conversions in one code)**
+👉 or **top LeetCode questions using these patterns**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## INDEX
 - [checklist](#checklist)
 - [number place value and face value](#number-place-value-and-face-value)
