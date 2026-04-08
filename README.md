@@ -5,10 +5,12 @@
 - [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)  digit extraction $
 - [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/description/) bitt manipulation $
 - [9. palindrom number](https://leetcode.com/problems/palindrome-number/) reverse / compare $
-- [66. Plus One](https://leetcode.com/problems/plus-one/) carry handling 
-- [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) basic math / binary search
-- [50. Pow(x, n)](https://leetcode.com/problems/powx-n/description/) fast exponentiation
-- [258. Add Digits](https://leetcode.com/problems/add-digits/) digit sum / math trick
+- [66. Plus One](https://leetcode.com/problems/plus-one/) carry handling $
+- [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) basic math / binary search $
+- [50. Pow(x, n)](https://leetcode.com/problems/powx-n/description/) fast exponentiation $
+- [258. Add Digits](https://leetcode.com/problems/add-digits/) digit sum / math trick $
+- [2544. Alternating Digit Sum](https://leetcode.com/problems/alternating-digit-sum/) $
+- [67. Add Binary](https://leetcode.com/problems/add-binary/)
 - [202. Happy Number](https://leetcode.com/problems/happy-number/)  digit square sum
 - [263. Ugly Number](https://leetcode.com/problems/ugly-number/)  prime factor check (2,3,5)
 - [204. Count Primes]() sieve of eratosthenes
@@ -32,9 +34,13 @@
 * reverse
 * changing num to string and string to binary
 * changing binary to int and int to binary  
-
-
-
+* carry handling 
+* modulo 9
+* extracting digits from string left to right 
+```cpp
+for(int i = 0; i < s.size(); i++){  // left to right
+            int dig = s[i] - '0';   // subtract '0' to convert char → integer
+```
 
 
 
@@ -108,13 +114,15 @@ public:
 
 * pow(x,n)
 ```cpp
+class Solution {
+public:
     double myPow(double x, int n) {
 
         long long pow = n;
 
         if(pow < 0){
-            x = 1/x;
-            pow = -pow;
+            x = 1/x;    // handling negative power 
+            pow = -pow;  // making n positive pow = n
         }
 
         double ans = 1;
@@ -124,11 +132,12 @@ public:
                 ans *= x;
             }
             x *= x;            // square
-            pow /= 2;
+            pow /= 2;          //x^n = (x^2)^(n/2)
         }
         
     return ans;
     }
+};
 ```
 
 * add digit
@@ -139,8 +148,44 @@ public:
    }
 ```
 
+* add sub alternatively
+```cpp
+    int alternateDigitSum(int n) {
+        string s = to_string(n); // convert int to string 
+        int sum = 0;
 
+        for(int i = 0; i < s.size(); i++){  // left to right
+            int dig = s[i] - '0';   // subtract '0' to convert char → integer
 
+            if(i % 2 == 0) sum += dig;
+            else sum -= dig;
+        }
+
+        return sum;
+    }
+```
+
+* Add Binary
+```cpp
+    string addBinary(string a, string b) {
+        string res = "";
+        int i = a.size() - 1;
+        int j = b.size() - 1;
+        int carry = 0;
+
+        while(i >= 0 || j >= 0 || carry) {
+            int sum = carry;
+
+            if(i >= 0) sum += a[i--] - '0';
+            if(j >= 0) sum += b[j--] - '0';
+
+            res.push_back((sum % 2) + '0');
+            carry = sum / 2;
+        }
+
+        reverse(res.begin(), res.end());
+        return res;
+```
 
 
 
@@ -568,7 +613,6 @@ return count;
 
 
 
-Here are your **complete, clean notes (DSA-focused 🚀)** for all 4 conversions:
 
 ---
 
@@ -783,6 +827,23 @@ If you want next level:
 
 
 
+## modulo 9 
+
+* Any number `% 9` is equal to the **sum of its digits % 9**
+* Repeating digit sum doesn’t change this remainder
+* So final single digit = **num % 9**
+* But if `% 9 == 0`, answer should be **9 (not 0)**
+
+👉 That’s why we use:
+
+```cpp
+1 + (num - 1) % 9
+```
+
+---
+
+👉 **One-liner:**
+*Digit sum repeatedly reduces a number without changing its mod 9 value.*
 
 
 
