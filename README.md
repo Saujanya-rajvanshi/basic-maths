@@ -10,23 +10,22 @@
 - [50. Pow(x, n)](https://leetcode.com/problems/powx-n/description/) fast exponentiation $
 - [258. Add Digits](https://leetcode.com/problems/add-digits/) digit sum / math trick $
 - [2544. Alternating Digit Sum](https://leetcode.com/problems/alternating-digit-sum/) $
-- [67. Add Binary](https://leetcode.com/problems/add-binary/)
-- [202. Happy Number](https://leetcode.com/problems/happy-number/)  digit square sum
-- [263. Ugly Number](https://leetcode.com/problems/ugly-number/)  prime factor check (2,3,5)
-- [204. Count Primes]() sieve of eratosthenes
-- [326. Power of Three](https://leetcode.com/problems/power-of-three/description/) math / division
-- [231. Power of Two](https://leetcode.com/problems/power-of-two/) bit / math
-- [342. Power of Four](https://leetcode.com/problems/power-of-four/) math + bit
-- [367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) binary search / math
-- [400. Nth Digit](https://leetcode.com/problems/nth-digit/) number pattern
+- [67. Add Binary](https://leetcode.com/problems/add-binary/) $
+- [202. Happy Number](https://leetcode.com/problems/happy-number/) digit square sum $
+- [263. Ugly Number](https://leetcode.com/problems/ugly-number/)  prime factor check (2,3,5) $
+- [326. Power of Three](https://leetcode.com/problems/power-of-three/description/)  math / division $
+- [231. Power of Two](https://leetcode.com/problems/power-of-two/) bit / math $
+- [342. Power of Four](https://leetcode.com/problems/power-of-four/) math + bit $
+- [367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) binary search / math 
+- [400. Nth Digit](https://leetcode.com/problems/nth-digit/) number pattern 
 - [172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) count 5s
+- [204. Count Primes]() sieve of eratosthenes
 - [1006. clumsy factorial](https://leetcode.com/problems/clumsy-factorial/)
 - [258. Add Digits](https://leetcode.com/problems/add-digits/) 
 - [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)
 - [1523. Count Odd Numbers in an Interval Range](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/)
-- [231. Power of Two](https://leetcode.com/problems/power-of-two/)
-- [326. Power of Three](https://leetcode.com/problems/power-of-three/)
-- [202. Happy Number](https://leetcode.com/problems/happy-number/)
+- [507. Perfect Number](https://leetcode.com/problems/perfect-number/)
+
 
 
 
@@ -41,6 +40,7 @@
 for(int i = 0; i < s.size(); i++){  // left to right
             int dig = s[i] - '0';   // subtract '0' to convert char → integer
 ```
+* power
 
 
 
@@ -186,6 +186,63 @@ public:
         reverse(res.begin(), res.end());
         return res;
 ```
+
+for finding if a number n is power of a number x 
+```cpp
+        if(n <= 0) return false;
+        while(n > 1){
+            if(n%x != 0) return false;
+            n = n / x;
+        }
+```
+
+```cpp 
+    bool isPerfectSquare(int num) {
+        long long left = 1, right = num;
+
+        while(left <= right) {
+            long long mid = left + (right - left) / 2;
+            long long sq = mid * mid;
+
+            if(sq == num) return true;
+            else if(sq < num) left = mid + 1;
+            else right = mid - 1;
+        }
+
+        return false;
+    }
+
+```
+
+* perfect aquare 
+```cpp
+class Solution {
+public:
+    bool checkPerfectNumber(int num) {
+        if(num <= 1) return false;
+
+        long long sum = 1;
+
+        for(int i = 2; i <= num / i; i++) {
+            if(num % i == 0) {
+                sum += i;
+
+                if(i != num / i) {
+                    sum += num / i;
+                }
+            }
+        }
+
+        return sum == num;
+    }
+};
+```
+
+
+
+
+
+
 
 
 
