@@ -16,9 +16,9 @@
 - [326. Power of Three](https://leetcode.com/problems/power-of-three/description/)  math / division $
 - [231. Power of Two](https://leetcode.com/problems/power-of-two/) bit / math $
 - [342. Power of Four](https://leetcode.com/problems/power-of-four/) math + bit $
-- [367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) binary search / math 
-- [400. Nth Digit](https://leetcode.com/problems/nth-digit/) number pattern 
-- [172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) count 5s
+- [367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) binary search / math $
+- [400. Nth Digit](https://leetcode.com/problems/nth-digit/) number pattern $
+- [172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) count 5s 
 - [204. Count Primes]() sieve of eratosthenes
 - [1006. clumsy factorial](https://leetcode.com/problems/clumsy-factorial/)
 - [258. Add Digits](https://leetcode.com/problems/add-digits/) 
