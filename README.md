@@ -1,31 +1,192 @@
 # basic-maths
 
 
-### basic maths codes 
+### basic maths codes
+
+```
+MATH
+├── Digit Manipulation
+├── Bit Manipulation
+├── Number Properties
+├── Carry Handling
+├── Binary Search on Answer
+├── Fast Exponentiation
+├── Prime & Sieve
+├── Factor & Divisibility
+├── Number Pattern
+└── Simulation
+```
+
+## 1. DIGIT MANIPULATION
+
 - [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)  digit extraction $
-- [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/description/) bitt manipulation $
 - [9. palindrom number](https://leetcode.com/problems/palindrome-number/) reverse / compare $
-- [66. Plus One](https://leetcode.com/problems/plus-one/) carry handling $
-- [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) basic math / binary search $
-- [50. Pow(x, n)](https://leetcode.com/problems/powx-n/description/) fast exponentiation $
 - [258. Add Digits](https://leetcode.com/problems/add-digits/) digit sum / math trick $
 - [2544. Alternating Digit Sum](https://leetcode.com/problems/alternating-digit-sum/) $
-- [67. Add Binary](https://leetcode.com/problems/add-binary/) $
 - [202. Happy Number](https://leetcode.com/problems/happy-number/) digit square sum $
-- [263. Ugly Number](https://leetcode.com/problems/ugly-number/)  prime factor check (2,3,5) $
-- [326. Power of Three](https://leetcode.com/problems/power-of-three/description/)  math / division $
+- [1837. Sum of Digits in Base K](https://leetcode.com/problems/sum-of-digits-in-base-k/) $
+- [1281. Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)
+- [1323. Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/)
+
+### 🧠 Pattern:
+
+* `% 10`, `/ 10`
+* Build / reverse number
+
+# 🔹 2. BIT MANIPULATION (BASIC MATH LINK)
+
+### ✅ You did:
+
+- [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/description/) bitt manipulation $
 - [231. Power of Two](https://leetcode.com/problems/power-of-two/) bit / math $
 - [342. Power of Four](https://leetcode.com/problems/power-of-four/) math + bit $
-- [367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) binary search / math $
-- [400. Nth Digit](https://leetcode.com/problems/nth-digit/) number pattern $
-- [172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) count 5s $
-- [1006. clumsy factorial](https://leetcode.com/problems/clumsy-factorial/) $
-- [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) $
+
+### 🧠 Pattern:
+
+* `n & (n-1)`
+* bit shifts
+
+### 🔥 Add:
+
+* **191. Number of 1 Bits (VERY IMPORTANT)**
+* **338. Counting Bits**
+
+---
+
+# 🔹 3. NUMBER PROPERTIES
+
+### ✅ You did:
+
+- [263. Ugly Number](https://leetcode.com/problems/ugly-number/)  prime factor check (2,3,5) $
+- [326. Power of Three](https://leetcode.com/problems/power-of-three/description/)  math / division $
 - [1523. Count Odd Numbers in an Interval Range](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/) $
 - [507. Perfect Number](https://leetcode.com/problems/perfect-number/) $
-- [1837. Sum of Digits in Base K](https://leetcode.com/problems/sum-of-digits-in-base-k/) $
-- [2652. Sum Multiples](https://leetcode.com/problems/sum-multiples/) $
+
+### 🧠 Pattern:
+
+* divisibility
+* factor logic
+
+### 🔥 Add:
+
+* **728. Self Dividing Numbers**
+* **2520. Count Digits That Divide a Number**
+
+---
+
+# 🔹 4. CARRY / NUMBER SYSTEM
+
+### ✅ You did:
+
+- [67. Add Binary](https://leetcode.com/problems/add-binary/) $
+- [66. Plus One](https://leetcode.com/problems/plus-one/) carry handling $
+
+### 🧠 Pattern:
+
+* carry propagation
+
+### 🔥 Add:
+
+* **415. Add Strings (VERY IMPORTANT)**
+
+# 🔹 5. BINARY SEARCH ON ANSWER
+
+- [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) basic math / binary search $
+- [367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) binary search / math $
+
+### 🧠 Pattern:
+
+* search space on answer
+
+### 🔥 Add:
+
+* **441. Arranging Coins**
+
+---
+
+# 🔹 6. FAST MATHEMATICS
+
+### ✅ You did:
+
+- [50. Pow(x, n)](https://leetcode.com/problems/powx-n/description/) fast exponentiation $
+
+### 🧠 Pattern:
+
+* binary exponentiation
+
+### 🔥 Add:
+
+* **372. Super Pow (advanced)**
+
+---
+
+# 🔹 7. PRIME & SIEVE
+
 - [204. Count Primes]() sieve of eratostheness
+
+### 🧠 Pattern:
+
+* sieve of eratosthenes
+
+### 🔥 Add:
+
+* **2523. Closest Prime Numbers in Range**
+* **1175. Prime Arrangements**
+
+---
+
+# 🔹 8. FACTOR & DIVISIBILITY
+
+### ✅ You did:
+
+- [172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) count 5s $
+- [1006. clumsy factorial](https://leetcode.com/problems/clumsy-factorial/) $
+
+### 🧠 Pattern:
+
+* count factors
+* divide repeatedly
+
+### 🔥 Add:
+
+* **1492. The kth Factor of n (IMPORTANT)**
+* **2427. Number of Common Factors**
+
+---
+
+# 🔹 9. NUMBER PATTERN / INDEXING
+
+### ✅ You did:
+
+- [400. Nth Digit](https://leetcode.com/problems/nth-digit/) number pattern $
+
+### 🧠 Pattern:
+
+* grouping numbers
+
+### 🔥 Add:
+
+* **168. Excel Sheet Column Title**
+* **171. Excel Sheet Column Number**
+
+---
+
+# 🔹 10. SIMULATION / FORMULA
+
+### ✅ You did:
+
+- [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) $
+- [2652. Sum Multiples](https://leetcode.com/problems/sum-multiples/) $
+
+### 🧠 Pattern:
+
+* direct formula / iteration
+
+### 🔥 Add:
+
+* **1342. Number of Steps to Reduce a Number to Zero**
+
+
 
 
 
