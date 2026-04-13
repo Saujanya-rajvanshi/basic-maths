@@ -23,9 +23,9 @@
 - [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) $
 - [1523. Count Odd Numbers in an Interval Range](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/) $
 - [507. Perfect Number](https://leetcode.com/problems/perfect-number/) $
-- [1837. Sum of Digits in Base K](https://leetcode.com/problems/sum-of-digits-in-base-k/) 
+- [1837. Sum of Digits in Base K](https://leetcode.com/problems/sum-of-digits-in-base-k/) $
+- [2652. Sum Multiples](https://leetcode.com/problems/sum-multiples/) $
 - [204. Count Primes]() sieve of eratostheness
-- [sum multiples]
 
 
 
