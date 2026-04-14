@@ -76,7 +76,8 @@ if(rev > INT_MAX/10 || rev < INT_MIN/10) return 0;
 
 * Use set to detect cycle (repetition)
 ```cpp
-unordered_set<int> seen;   // Some numbers never reach 1, they loop forever: 2 → 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4 → ...
+unordered_set<int> seen;
+// Some numbers never reach 1, they loop forever: 2 → 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4 → ...
 while(n != 1 && seen.find(n) == seen.end()){ // n is not in set → continue
     seen.insert(n);
 ```
