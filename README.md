@@ -25,13 +25,63 @@ MATH
 - [2544. Alternating Digit Sum](https://leetcode.com/problems/alternating-digit-sum/) $
 - [202. Happy Number](https://leetcode.com/problems/happy-number/) digit square sum $
 - [1837. Sum of Digits in Base K](https://leetcode.com/problems/sum-of-digits-in-base-k/) $
-- [1281. Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/)
-- [1323. Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/)
+- [1281. Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/) $
+- [1323. Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/) $
 
 ### 🧠 Pattern:
+Digit Problems = Extract → Process → Rebuild <br><br>
 
-* `% 10`, `/ 10`
-* Build / reverse number
+1. Extract → n % 10 <br>
+2. Remove → n / 10 <br>
+3. Build → ans = ans * 10 + digit <br>
+4. Traverse → right to left (default) <br>
+5. Optional → string or divisor method <br>
+
+* changing **int into string** : `string s = to_string(x);` **accessing** : for(char c : s) { cout << c << " "; } or by loop and : `s[i]`
+* **Build** : also reversing a integer : **manually** `rev = rev * 10 + digit`   or using **string manipulation** `string rev = s;` `reverse(rev.begin(), rev.end());`
+* **add digit** until it becmes one digit number
+```cpp
+if(num == 0) return 0;   
+return 1 + (num - 1) % 9;
+```
+* changing **string into int** : `int num = stoi(s);` **accsesing** : `int dig = s[i] - '0';`
+
+### extra
+* Left → Right traversal without string
+```cpp
+int div = 1;
+while(num / div >= 10) div *= 10;
+
+while(div > 0) {
+    int digit = num / div;
+    num %= div;
+    div /= 10;
+}
+```
+
+```cpp
+while(num > 0) {
+    digits.push_back(num % 10);
+    num /= 10;
+}
+for(int d : digits) {
+    cout << d << " ";
+}
+```
+
+* Before rev * 10 → check overflow
+```cpp
+if(rev > INT_MAX/10 || rev < INT_MIN/10) return 0;
+```
+
+* Use set to detect cycle (repetition)
+```cpp
+unordered_set<int> seen;   // Some numbers never reach 1, they loop forever: 2 → 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4 → ...
+while(n != 1 && seen.find(n) == seen.end()){ // n is not in set → continue
+    seen.insert(n);
+```
+
+* Time Complexity section : Most digit problems → O(digits) ≈ O(log n)
 
 # 🔹 2. BIT MANIPULATION (BASIC MATH LINK)
 
