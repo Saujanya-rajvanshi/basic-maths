@@ -37,7 +37,7 @@ Digit Problems = Extract → Process → Rebuild <br><br>
 4. Traverse → right to left (default) <br>
 5. Optional → string or divisor method <br>
 
-* changing **int into string** : `string s = to_string(x);` **accessing** : `for(char c : s) { cout << c << " "; }` or by loop and : `s[i]`
+* changing **int into string** : `string s = to_string(x);` **accessing** : `for(char c : s) { cout << c << " "; }` or by loop and : `s[i]` imdexing is from left to right
 * **Build** : also reversing a integer : **manually** `rev = rev * 10 + digit`   or using **string manipulation** `string rev = s;` `reverse(rev.begin(), rev.end());`
 * **add digit** until it becmes one digit number
 ```cpp
@@ -94,12 +94,52 @@ while(n != 1 && seen.find(n) == seen.end()){ // n is not in set → continue
 
 ### 🧠 Pattern:
 
-* `n & (n-1)`
-* bit shifts
+* 32 bit ans : `uint32_t` loop from 0 to < 32
+* reverse   shift left , add , shift right 
+```cpp
+rev = (rev << 1) | (n & 1);
+n >>= 1; 
+```
+* convert **int to bit** : bitset<32> b(n);
+* convert **bit to string** : string s = b.to_string();
 
 ### extras 
 
+* changing int to binary
+```cpp
+// using loop
+string toBinary(int n) {
+    string res = "";
 
+    while(n > 0) {
+        res += (n % 2) + '0';  // get last bit
+        n /= 2;
+    }
+
+    reverse(res.begin(), res.end());
+    return res;
+}
+```
+```cpp
+// using bit method
+string toBinary(int n) {
+    string res = "";
+
+    while(n > 0) {
+        res += (n & 1) + '0';  // last bit
+        n >>= 1;
+    }
+
+    reverse(res.begin(), res.end());
+    return res;
+}
+```
+```cpp
+#include <bitset>
+
+bitset<32> b(n);
+cout << b;
+```
 
 
 
