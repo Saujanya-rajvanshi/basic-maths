@@ -84,27 +84,26 @@ while(n != 1 && seen.find(n) == seen.end()){ // n is not in set → continue
 
 * Time Complexity section : Most digit problems → O(digits) ≈ O(log n)
 
-# 🔹 2. BIT MANIPULATION (BASIC MATH LINK)
-
-### ✅ You did:
+## 2. BIT MANIPULATION 
 
 - [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/description/) bitt manipulation $
 - [231. Power of Two](https://leetcode.com/problems/power-of-two/) bit / math $
 - [342. Power of Four](https://leetcode.com/problems/power-of-four/) math + bit $
+- [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
+- [338. Counting Bits](https://leetcode.com/problems/counting-bits/)
 
 ### 🧠 Pattern:
 
 * `n & (n-1)`
 * bit shifts
 
-### 🔥 Add:
+### extras 
 
-* **191. Number of 1 Bits (VERY IMPORTANT)**
-* **338. Counting Bits**
 
----
 
-# 🔹 3. NUMBER PROPERTIES
+
+
+## 3. NUMBER PROPERTIES
 
 ### ✅ You did:
 
