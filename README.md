@@ -37,7 +37,7 @@ Digit Problems = Extract → Process → Rebuild <br><br>
 4. Traverse → right to left (default) <br>
 5. Optional → string or divisor method <br>
 
-* changing **int into string** : `string s = to_string(x);` **accessing** : for(char c : s) { cout << c << " "; } or by loop and : `s[i]`
+* changing **int into string** : `string s = to_string(x);` **accessing** : `for(char c : s) { cout << c << " "; }` or by loop and : `s[i]`
 * **Build** : also reversing a integer : **manually** `rev = rev * 10 + digit`   or using **string manipulation** `string rev = s;` `reverse(rev.begin(), rev.end());`
 * **add digit** until it becmes one digit number
 ```cpp
