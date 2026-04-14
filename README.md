@@ -1,4 +1,4 @@
-# basic-maths
+# Basic-Maths
 
 
 ### basic maths codes
