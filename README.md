@@ -91,6 +91,18 @@ while(n != 1 && seen.find(n) == seen.end()){ // n is not in set → continue
 - [342. Power of Four](https://leetcode.com/problems/power-of-four/) math + bit $
 - [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
 - [338. Counting Bits](https://leetcode.com/problems/counting-bits/)
+- [Single Number]()
+* Missing Number ⭐
+* Sum of Two Integers ⭐
+* Subsets (bitmasking) ⭐
+* Counting Bits (already done, revise)
+## 🔹 IMPORTANT
+* Bitwise AND of Numbers Range
+* Maximum XOR of Two Numbers
+* Divide Two Integers
+## 🔹 OPTIONAL (if time)
+* Gray Code
+* Subsets II
 
 ### 🧠 Pattern:
 
@@ -102,6 +114,75 @@ n >>= 1;
 ```
 * convert **int to bit** : bitset<32> b(n);
 * convert **bit to string** : string s = b.to_string();
+* **&  AND** → both 1 → 1 , used for extracting last bit 
+```
+n = 1011
+    0001
+---------
+    0001  → 1
+```
+* **|  OR**  → any 1 → 1
+```
+bit = 1        bit = 0
+ 1010           1010
+ 0001           0000
+------         ------
+ 1011           1010
+```
+* **^  XOR** → different → 1
+* **~  NOT** → flip bits
+* Shifts , majing space to add something 
+    * <<  → left shift  → ×2
+    * >>  → right shift → ÷2
+* Core Bit Tricks 
+    * Check ith bit  : (n >> i) & 1
+    * Set ith bit : n | (1 << i)
+    * Clear ith bit : n & ~(1 << i)
+    * Toggle ith bit : n ^ (1 << i)
+* Important Patterns
+    * Remove last set bit : n = n & (n - 1)
+    * Check power of 2 : n > 0 && (n & (n - 1)) == 0
+    * Get lowest set bit : n & (-n)
+* Count Bits :
+    * Built-in
+```cpp
+__builtin_popcount(n)
+__builtin_popcountll(n)
+Counts number of `1`s in binary
+```
+    * Manual
+```cpp
+while(n){
+    count += n & 1;
+    n >>= 1;
+}
+```
+    * Fast (Brian Kernighan)
+```cpp
+while(n){
+    n = n & (n - 1);
+    count++;
+}
+```
+    * DP Bit Trick
+```cpp
+ans[i] = ans[i >> 1] + (i & 1)
+```
+    * XOR Properties
+```text
+a ^ a = 0
+a ^ 0 = a
+Used in:
+    single number
+    missing number
+```
+
+
+
+
+
+
+
 
 ### extras 
 
