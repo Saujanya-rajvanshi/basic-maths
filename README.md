@@ -96,8 +96,9 @@ while(n != 1 && seen.find(n) == seen.end()){ // n is not in set → continue
 - [260. Single Number III](https://leetcode.com/problems/single-number-iii/)
 - [combined single number solution](https://chatgpt.com/s/t_69df4d96672c819180edeefff5abf6c8)
 - [268. Missing Number](https://leetcode.com/problems/missing-number/)
+
 ##
-- [Sum of Two Integers]()
+- [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) -[ex](https://chatgpt.com/s/t_69df5c903f7c819197279202fbf76222)
 - [Subsets (bitmasking)]()
 ## 🔹 IMPORTANT
 * Bitwise AND of Numbers Range
