@@ -89,13 +89,16 @@ while(n != 1 && seen.find(n) == seen.end()){ // n is not in set → continue
 - [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/description/) bitt manipulation $
 - [231. Power of Two](https://leetcode.com/problems/power-of-two/) bit / math $
 - [342. Power of Four](https://leetcode.com/problems/power-of-four/) math + bit $
-- [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
-- [338. Counting Bits](https://leetcode.com/problems/counting-bits/)
-- [Single Number]()
-* Missing Number ⭐
-* Sum of Two Integers ⭐
-* Subsets (bitmasking) ⭐
-* Counting Bits (already done, revise)
+- [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) $
+- [338. Counting Bits](https://leetcode.com/problems/counting-bits/) $
+- [136. Single Number](https://leetcode.com/problems/single-number/)-[ex](https://chatgpt.com/s/t_69df4b2bdf488191846dd1939a3c2cfc) $
+- [137. Single Number II](https://leetcode.com/problems/single-number-ii/)
+- [260. Single Number III](https://leetcode.com/problems/single-number-iii/)
+- [combined single number solution](https://chatgpt.com/s/t_69df4d96672c819180edeefff5abf6c8)
+- [268. Missing Number](https://leetcode.com/problems/missing-number/)
+##
+- [Sum of Two Integers]()
+- [Subsets (bitmasking)]()
 ## 🔹 IMPORTANT
 * Bitwise AND of Numbers Range
 * Maximum XOR of Two Numbers
