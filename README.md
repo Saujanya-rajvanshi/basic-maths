@@ -96,14 +96,12 @@ while(n != 1 && seen.find(n) == seen.end()){ // n is not in set → continue
 - [260. Single Number III](https://leetcode.com/problems/single-number-iii/)
 - [combined single number solution](https://chatgpt.com/s/t_69df4d96672c819180edeefff5abf6c8)
 - [268. Missing Number](https://leetcode.com/problems/missing-number/)
-
-##
-- [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) -[ex](https://chatgpt.com/s/t_69df5c903f7c819197279202fbf76222)
-- [Subsets (bitmasking)]()
-## 🔹 IMPORTANT
-* Bitwise AND of Numbers Range
-* Maximum XOR of Two Numbers
-* Divide Two Integers
+- [371. Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) -[ex](https://chatgpt.com/s/t_69df5c903f7c819197279202fbf76222)
+- [78. Subsets (bitmasking)](https://leetcode.com/problems/subsets/description/) -[ex](https://chatgpt.com/s/t_69e05501cc908191bcc653f7b4b34a85)
+- [201. Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/description/) -[ex](https://chatgpt.com/s/t_69e17d59d9508191959107059b8421f1)
+- [421. Maximum XOR of Two Numbers](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)
+- [29. Divide Two Integers](https://leetcode.com/problems/divide-two-integers/description/) -[ex](https://chatgpt.com/s/t_69e181ed512c8191963648b562dbe504)
+  
 ## 🔹 OPTIONAL (if time)
 * Gray Code
 * Subsets II
