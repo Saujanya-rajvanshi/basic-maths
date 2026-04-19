@@ -536,23 +536,72 @@ Power → divide till 1
 ```
 
 
-# 🔹 6. FAST MATHEMATICS
-
-### ✅ You did:
+## 6. FAST MATHEMATICS
 
 - [50. Pow(x, n)](https://leetcode.com/problems/powx-n/description/) fast exponentiation $
+- [372. Super Pow](https://leetcode.com/problems/super-pow/)
 
 ### 🧠 Pattern:
 
-* binary exponentiation
+```cpp
+class Solution {
+public:
+    double myPow(double x, int n) {
 
-### 🔥 Add:
+        long long pow = n;
 
-* **372. Super Pow (advanced)**
+        if(pow < 0){
+            x = 1/x;    // handling negative power 
+            pow = -pow;  // making n positive pow = n
+        }
 
----
+        double ans = 1;
 
-# 🔹 7. PRIME & SIEVE
+        while(pow > 0){
+            if(pow % 2 == 1){   // odd
+                ans *= x;
+            }
+            x *= x;            // square
+            pow /= 2;          //x^n = (x^2)^(n/2)
+        }
+        
+    return ans;
+    }
+};
+```
+
+```cpp
+class Solution {
+public:
+    int mod = 1337;
+
+    int power(int x, int n) {
+        int res = 1;
+        x %= mod;
+
+        while(n > 0) {
+            if(n & 1) res = (res * x) % mod;
+            x = (x * x) % mod;
+            n >>= 1;
+        }
+        return res;
+    }
+
+    int superPow(int a, vector<int>& b) {
+        int result = 1;
+
+        for(int digit : b) {
+            result = power(result, 10) * power(a, digit) % mod;
+        }
+
+        return result;
+    }
+};
+```
+
+
+
+## 7. PRIME & SIEVE
 
 - [204. Count Primes]() sieve of eratostheness
 
