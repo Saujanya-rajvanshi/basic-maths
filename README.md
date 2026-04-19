@@ -499,20 +499,42 @@ Power → divide till 1
 
 
 
-# 🔹 5. BINARY SEARCH ON ANSWER
+## 5. BINARY SEARCH ON ANSWER
 
 - [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) basic math / binary search $
 - [367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) binary search / math $
+- [441. Arranging Coins]()
 
 ### 🧠 Pattern:
 
-* search space on answer
+* sqrt
+```cpp
+    int i = 1;
+        while(i <= x / i){
+            i++;
+        }
+    return i - 1;
+```
+* arranging coins 
+```cpp
+        long long left = 0, right = n;
 
-### 🔥 Add:
+        while(left <= right) {
+            long long mid = left + (right - left)/2;
+            long long sum = mid * (mid + 1) / 2;
 
-* **441. Arranging Coins**
+            if(sum == n) return mid;
+            else if(sum < n) left = mid + 1;
+            else right = mid - 1;
+        }
 
----
+        return right;
+```
+
+```cpp
+        return (int)((-1 + sqrt(1 + 8LL * n)) / 2);
+```
+
 
 # 🔹 6. FAST MATHEMATICS
 
