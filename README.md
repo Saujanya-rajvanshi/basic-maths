@@ -234,33 +234,270 @@ cout << b;
 - [326. Power of Three](https://leetcode.com/problems/power-of-three/description/)  math / division $
 - [1523. Count Odd Numbers in an Interval Range](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/) $
 - [507. Perfect Number](https://leetcode.com/problems/perfect-number/) $
+- [728. Self Dividing Numbers](https://leetcode.com/problems/self-dividing-numbers/)
+- [2520. Count Digits That Divide a Number](https://leetcode.com/problems/count-the-digits-that-divide-a-number/)
 
 ### 🧠 Pattern:
 
-* divisibility
-* factor logic
+## 1. DIVISIBILITY & FACTOR LOGIC
 
-### 🔥 Add:
+### Core Idea
 
-* **728. Self Dividing Numbers**
-* **2520. Count Digits That Divide a Number**
+```text
+If a % b == 0 → b is a factor of a
+```
 
----
+### Patterns
 
-# 🔹 4. CARRY / NUMBER SYSTEM
+#### ➤ Factor Checking
 
-### ✅ You did:
+* loop till √n
+* use divisor pairs
+
+```cpp
+for(int i = 2; i <= n / i; i++) {
+    if(n % i == 0) {
+        // i and n/i are factors
+    }
+}
+```
+
+#### ➤ Problems
+
+* Perfect Number
+* Count Primes
+
+
+### Key Property
+
+```text
+Factors come in pairs → (i, n/i)
+```
+
+## 2. PRIME FACTOR / FACTOR STRIPPING
+
+### Core Idea
+
+```text
+Keep dividing by allowed factors
+Check what remains
+```
+
+#### ➤ Template
+
+```cpp
+for(prime in allowed_primes) {
+    while(n % prime == 0) {
+        n /= prime;
+    }
+}
+return n == 1;
+```
+
+#### ➤ Problems
+
+* Ugly Number
+* Power of Three
+
+### Key Property
+
+```text
+If only allowed primes exist → number reduces to 1
+```
+
+## 3. DIGIT MANIPULATION + DIVISIBILITY
+
+### Core Idea
+
+```text
+Break number into digits → apply logic on each digit
+```
+
+#### ➤ Template
+
+```cpp
+while(num > 0) {
+    int digit = num % 10;
+
+    // apply condition
+
+    num /= 10;
+}
+```
+
+#### ➤ Problems
+
+* Self Dividing Numbers
+* Count Digits That Divide a Number
+
+### Key Properties
+
+```text
+digit = num % 10
+num /= 10
+digit != 0 (avoid division by zero)
+```
+
+## 4. RANGE COUNTING (MATH OPTIMIZATION)
+
+### Core Idea
+
+```text
+Avoid loops → use formula
+```
+
+#### ➤ Odd Numbers
+
+```cpp
+(high + 1)/2 - (low / 2)
+```
+
+#### ➤ Problem
+
+* Count Odd Numbers in an Interval Range
+
+### Key Property
+
+```text
+Every 2 numbers → 1 odd
+```
+
+## 5. DIVISOR SUM / PERFECT NUMBER
+
+### Core Idea
+
+```text
+Sum of proper divisors = number
+```
+
+#### ➤ Pattern
+
+```cpp
+sum = 1;
+
+for(int i = 2; i <= n / i; i++) {
+    if(n % i == 0) {
+        sum += i;
+
+        if(i != n/i)
+            sum += n/i;
+    }
+}
+```
+
+#### ➤ Problem
+
+* Perfect Number
+
+### Key Property
+
+```text
+Use divisor pairs + avoid duplicates
+```
+
+## 6. POWER CHECK (REPEATED DIVISION)
+
+### Core Idea
+
+```text
+Divide until 1 → only allowed factor should exist
+```
+
+#### ➤ Pattern
+
+```cpp
+while(n > 1) {
+    if(n % k != 0) return false;
+    n /= k;
+}
+return true;
+```
+
+#### ➤ Problems
+
+* Power of Three
+* Power of Two
+
+### Key Property
+
+```text
+n = k^x
+```
+
+
+| Pattern           | Use When                  |
+| ----------------- | ------------------------- |
+| Factor pairs      | divisors / perfect number |
+| Factor stripping  | allowed primes            |
+| Digit extraction  | digit-based problems      |
+| Range formula     | counting problems         |
+| Repeated division | power check               |
+
+```text
+Factors → √n loop  
+Prime check → divide repeatedly  
+Digits → %10, /10  
+Range → formula  
+Power → divide till 1
+```
+
+
+
+
+## 4. CARRY / NUMBER SYSTEM
 
 - [67. Add Binary](https://leetcode.com/problems/add-binary/) $
 - [66. Plus One](https://leetcode.com/problems/plus-one/) carry handling $
+- [415. Add Strings]()
 
 ### 🧠 Pattern:
 
-* carry propagation
+* add binary string
 
-### 🔥 Add:
+```cpp
+        string res = "";
+        int i = a.size() - 1;         // = 1
+        int j = b.size() - 1;         // = 0
+        int carry = 0;
 
-* **415. Add Strings (VERY IMPORTANT)**
+        while(i >= 0 || j >= 0 || carry) {             // if any true       
+            int sum = carry;                           // sum = 0              // sum = 1         // sum = 1
+
+            if(i >= 0) sum += a[i--] - '0';            // i = 1  sum = 0 + 1 = '1'       // i = 0 sum = 1 + 1 = 2
+            if(j >= 0) sum += b[j--] - '0';            // i = 0  sum = 1 + 1 = '2'       
+
+            res.push_back((sum % 2) + '0');            // "0"                           // "001"
+            carry = sum / 2;                           // carry = 2/2 = 1               // carry = 2/2 = 1
+        }
+
+        reverse(res.begin(), res.end());        // "100"
+        return res;
+```
+
+* carry in binary array
+
+```cpp
+        int n = digits.size();      // n =  3  [1,2,9]
+
+        for(int i = n-1; i >= 0; i--){        // i = 2         i = 1
+            if(digits[i] < 9){                // 9 = 9  X      // 2 < 0
+                digits[i]++;                                   // [1,3,0]
+                return digits;                                 
+            }
+            digits[i] = 0;                    // [1,2,0]
+        }
+        digits.insert(digits.begin(), 1);
+        return digits;
+```
+
+* add decimal string
+
+```cpp
+            res.push_back((sum % 10) + '0');           
+            carry = sum / 10;
+```
+
+
 
 # 🔹 5. BINARY SEARCH ON ANSWER
 
