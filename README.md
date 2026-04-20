@@ -622,15 +622,63 @@ public:
 
 - [172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) count 5s $
 - [1006. clumsy factorial](https://leetcode.com/problems/clumsy-factorial/) $
+- [1492. The kth Factor of n](https://leetcode.com/problems/the-kth-factor-of-n/)
+- [2427. Number of Common Factors]()
 
 ### 🧠 Pattern:
 
 * count factors
+
+* find zero
+```cpp
+while(n > 0){        // 5 > 0  
+            n /= 5;          // n = 5/5 = 1
+            count += n;      // count = 0 + 1;
+        }
+```
+
 * divide repeatedly
+
+* clumsy factorial
+```cpp
+  while(i >= 1){                        // 4 > 1    // 0<1   X
+            int mul = i;                      // mul = 4
+            if(i-1 > 0) mul *= (i-1);         // 3 > 0 , mul = 4*3 = 12
+
+            int dev = mul;                    // dev = 3 
+            if(i-2 > 0) dev /= (i-2);         // 2 > 0 , dev = 12/2 = 6
+
+            if(firstBlock){                   // first block = true
+                result += dev;                // result = 6
+                firstBlock = false;
+            } else {
+                result -= dev;
+            }
+            if(i-3 > 0)                       // 1 > 0
+                result += (i-3);              // result = 6 + 1 = 7
+            i -= 4;                           // i = 4 - 4 = 0
+
+        }
+```
+
+* common factors
+```cpp
+int m = min(a,b);
+        int count = 0 ;
+        for(int i = 1;i <= m ;i++){
+            if(a%i == 0 && b%i == 0){
+                count += 1;
+            }
+        }
+```
+
+
+
+
 
 ### 🔥 Add:
 
-* **1492. The kth Factor of n (IMPORTANT)**
+
 * **2427. Number of Common Factors**
 
 ---
