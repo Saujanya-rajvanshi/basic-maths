@@ -614,16 +614,12 @@ public:
 * **2523. Closest Prime Numbers in Range**
 * **1175. Prime Arrangements**
 
----
-
-# 🔹 8. FACTOR & DIVISIBILITY
-
-### ✅ You did:
+## 8. FACTOR & DIVISIBILITY
 
 - [172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) count 5s $
 - [1006. clumsy factorial](https://leetcode.com/problems/clumsy-factorial/) $
 - [1492. The kth Factor of n](https://leetcode.com/problems/the-kth-factor-of-n/)
-- [2427. Number of Common Factors]()
+- [2427. Number of Common Factors](https://leetcode.com/problems/number-of-common-factors/)
 
 ### 🧠 Pattern:
 
@@ -673,32 +669,19 @@ int m = min(a,b);
 ```
 
 
-
-
-
-### 🔥 Add:
-
-
-* **2427. Number of Common Factors**
-
----
-
-# 🔹 9. NUMBER PATTERN / INDEXING
-
-### ✅ You did:
+## 9. NUMBER PATTERN / INDEXING
 
 - [400. Nth Digit](https://leetcode.com/problems/nth-digit/) number pattern $
+- [168. Excel Sheet Column Title]()
+- [171. Excel Sheet Column Number]()
 
 ### 🧠 Pattern:
 
 * grouping numbers
 
-### 🔥 Add:
 
-* **168. Excel Sheet Column Title**
-* **171. Excel Sheet Column Number**
 
----
+
 
 # 🔹 10. SIMULATION / FORMULA
 
