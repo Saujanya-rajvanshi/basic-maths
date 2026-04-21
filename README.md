@@ -672,31 +672,108 @@ int m = min(a,b);
 ## 9. NUMBER PATTERN / INDEXING
 
 - [400. Nth Digit](https://leetcode.com/problems/nth-digit/) number pattern $
-- [168. Excel Sheet Column Title]()
+- [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
 - [171. Excel Sheet Column Number]()
 
 ### 🧠 Pattern:
 
-* grouping numbers
+* nth digit
+```cpp
+class Solution {
+public:
+    int findNthDigit(int n) {    // eg n = 250
+        long long i = 1;         // digits per number
+        long long count = 9;     // how many numbers in this group
+        long long start = 1;     // starting number
+
+    while(n > i * count) {     // 250 > 1 * 9 , 241 > 2 * 90 ,           [61 < 3 * 900] stop
+        n -= i * count;        // remove digits of current group  ,  n = 250 - (1 * 9) = 241 , n = 241 - (2 * 90) = 61
+        i += 1;                // move to next digit length  ,  i = 2 , i = 3
+        count *= 10;           // numbers increase (9 → 90 → 900)  , count = 90 , count = 900
+        start *= 10;           // starting number (1 → 10 → 100)  , start = 10 , start = 100 
+
+        // Skip 1-digit → n = 250 - 9 = 241 Skip 2-dig it → n = 241 - 180 = 61
+    }
+
+    long long number = start + (n-1)/i;     // = 100 + (61-1)/3 = 120
+    std::string s = std::to_string(number);      // s = "120"  s[0] = '1' , s[1] = '2' , s[2] = '0'
+    return s[(n - 1) % i] - '0';    //  (61-1) % 3 = 60 % 3 = 0    which is = s[0] = 1 
+    }
+};
+```
+* number to asci
+```cpp
+class Solution {
+public:
+    string convertToTitle(int columnNumber) {
+        string result = "";
+
+        while (columnNumber > 0) {
+            columnNumber--;  // adjust for 1-based indexing
+            char ch = 'A' + (columnNumber % 26);
+            result = ch + result;
+            columnNumber /= 26;
+        }
+
+        return result;
+    }
+};
+```
+
+
+
+* asci to number
+```cpp
+class Solution {
+public:
+    int titleToNumber(string columnTitle) {
+        int result = 0;
+
+        for (char ch : columnTitle) {
+            result = result * 26 + (ch - 'A' + 1);
+        }
+
+        return result;
+    }
+};
+```
 
 
 
 
 
-# 🔹 10. SIMULATION / FORMULA
 
-### ✅ You did:
+
+
+
+## 10. SIMULATION / FORMULA
 
 - [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) $
 - [2652. Sum Multiples](https://leetcode.com/problems/sum-multiples/) $
+- [1342. Number of Steps to Reduce a Number to Zero]()
 
 ### 🧠 Pattern:
 
-* direct formula / iteration
+```cpp
+class Solution {
+public:
+    vector<string> fizzBuzz(int n) {                         // n = 3
+        vector<string> ans;                                    
+        for(int i = 1 ; i <= n ;i++){                        // i = 1 , i = 2 , i = 3
+            if(i%3 == 0 || i%5 == 0){                        // X   , X  , true
+                if(i%3 == 0 && i%5 == 0) {                   //   ,    ,   X 
+                    ans.push_back("FizzBuzz");
+                }
+                else if(i%3 == 0) ans.push_back("Fizz");     // 3%3 = 0
+                else if(i%5 == 0) ans.push_back("Buzz");     //   ,     ,  X
+            }
+            else ans.push_back(to_string(i));                 // push 1, push 2
+        }
+    return ans;      // ans = 1, 2, "Fizz"
+    }
+};
+```
 
-### 🔥 Add:
-
-* **1342. Number of Steps to Reduce a Number to Zero**
 
 
 
