@@ -36,6 +36,7 @@ Digit Problems = Extract → Process → Rebuild <br><br>
 3. Build → ans = ans * 10 + digit <br>
 4. Traverse → right to left (default) <br>
 5. Optional → string or divisor method <br>
+6. Reverse → revNum = (revNum * 10) + 1d;
 
 * changing **int into string** : `string s = to_string(x);` **accessing** : `for(char c : s) { cout << c << " "; }` or by loop and : `s[i]` imdexing is from left to right
 * **Build** : also reversing a integer : **manually** `rev = rev * 10 + digit`   or using **string manipulation** `string rev = s;` `reverse(rev.begin(), rev.end());`
@@ -56,6 +57,14 @@ while(div > 0) {
     int digit = num / div;
     num %= div;
     div /= 10;
+}
+
+OR
+
+#include<bits/stdc++.h>
+int count(int n) {
+    int cnt =(int)(log10(n) + 1);
+    return cnt;
 }
 ```
 
