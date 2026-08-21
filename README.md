@@ -101,10 +101,10 @@ while(n != 1 && seen.find(n) == seen.end()){ // n is not in set → continue
 - [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) $
 - [338. Counting Bits](https://leetcode.com/problems/counting-bits/) $
 - [136. Single Number](https://leetcode.com/problems/single-number/)-[ex](https://chatgpt.com/s/t_69df4b2bdf488191846dd1939a3c2cfc) $
-- [137. Single Number II](https://leetcode.com/problems/single-number-ii/)
-- [260. Single Number III](https://leetcode.com/problems/single-number-iii/)
-- [combined single number solution](https://chatgpt.com/s/t_69df4d96672c819180edeefff5abf6c8)
-- [268. Missing Number](https://leetcode.com/problems/missing-number/)
+- [137. Single Number II](https://leetcode.com/problems/single-number-ii/)  $
+- [260. Single Number III](https://leetcode.com/problems/single-number-iii/)  $
+- [combined single number solution](https://chatgpt.com/s/t_69df4d96672c819180edeefff5abf6c8)  $
+- [268. Missing Number](https://leetcode.com/problems/missing-number/)  $
 - [371. Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) -[ex](https://chatgpt.com/s/t_69df5c903f7c819197279202fbf76222)
 - [78. Subsets (bitmasking)](https://leetcode.com/problems/subsets/description/) -[ex](https://chatgpt.com/s/t_69e05501cc908191bcc653f7b4b34a85)
 - [201. Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/description/) -[ex](https://chatgpt.com/s/t_69e17d59d9508191959107059b8421f1)
